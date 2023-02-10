@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "nohedidnt-py"
+version = "0.1.0"
+description = ""
+authors = ["NoHeDidnt <dj@nohedidnt.de>"]
+readme = "README.md"
+packages = [{include = "nohedidnt_py"}]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.poetry.dev-dependencies]
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
