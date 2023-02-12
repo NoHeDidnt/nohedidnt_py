@@ -148,7 +148,7 @@ plugins = [
 
 
 [tool.pytest.ini_options]
-addopts = "--color=yes --cov=nohedidnt_py --cov-report=xml --cov-report=term --durations=5"
+addopts = "--color=yes --cov=nohedidnt_py --cov-report=xml --durations=5"
 minversion = "5.0"
 pythonpath = ["nohedidnt_py"]
 testpaths = ["tests"]
