@@ -23,47 +23,47 @@ DATA_DIR, DEBUG_FILE, ENV_FILE, LOG_FILE, PROJS_DIR = None, None, None, None, No
 
 def nhd_pkg_env_info(value: OptPath = None) -> StrTupl:
     env_values = Box(os.environ.copy())
-    
+
     if value is not None:
         env_values.merge_update(dotenv_values())
-    
+
     return env_values.get("PKG_ABBR", "nhd"), env_values.get("PKG_AUTHOR", "NoHeDidn't")
 
 
 def nhd_pkg_name(value: Path) -> str:
     if not value.is_dir():
         raise ValueError("Invalid value")
-    
+
     if value.stem == "core":
         value = value.parent
-    
+
     return value.stem
 
 
 def nhd_pkg_info(value: OptPath = None) -> PkgTupl:
     if value is None:
         value = Path().resolve()
-    
+
     if not isinstance(value, Path) or not value.exists() or not value.is_dir():
         raise ValueError("Invalid value")
-    
+
     home_dir = Path.home()
     if not isinstance(home_dir, Path) or not home_dir.exists() or not home_dir.is_dir():
         raise ValueError("Invalid home_dir")
-    
+
     name = nhd_pkg_name(value)
     name_count = value.parts.count(name)
-    
+
     while name_count > 1:
         value = value.parent
         name_count = value.parts.count(name)
-        
+
         if name_count <= 1:
             break
-    
+
     if not value.is_dir() or home_dir not in value.parents:
         raise ValueError("Invalid value")
-    
+
     return value, name
 
 
