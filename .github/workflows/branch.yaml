@@ -1,5 +1,8 @@
 name: Push
 on: [push]
+env:
+  DEVEL_MODE=1
+  TEST_MODE=1
 
 jobs:
   test:

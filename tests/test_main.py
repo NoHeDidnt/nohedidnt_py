@@ -2,5 +2,5 @@
 from tests.context import *
 
 
-def test_always_passes():
-    assert True
+def test_nhd_debug():
+    assert nhd_debug("Test Message") is None
