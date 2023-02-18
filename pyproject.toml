@@ -73,7 +73,6 @@ omit = [
     "*/.pytest_cache/*",
     "*/tests/*",
     "*/.venv/*",
-    "*/__init__.py",
     "*/__main__.py",
     "*/run.py"
 ]
