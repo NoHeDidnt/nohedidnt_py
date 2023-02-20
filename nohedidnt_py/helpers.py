@@ -4,7 +4,7 @@ from nohedidnt_py.constants import *
 
 def nhd_debug(msg: str, caller: str = PKG_ABBR) -> None:
     """NHD debug function"""
-    
+
     msg = format_msg(msg, caller, length=DISPLAY_COLS)
     debug(msg)
 

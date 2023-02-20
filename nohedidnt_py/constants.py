@@ -46,14 +46,14 @@ def nhd_pkg_env_info(value: OptPath = None) -> StrTupl:
 def nhd_pkg_name(value: Path) -> str:
     """
     Get package name
-    
+
     DOCS Description
-    
+
     :param value: a Path
     :return: package name
     :rtype: str
     """
-    
+
     if not value.is_dir():
         raise ValueError("Invalid value")
 
@@ -88,7 +88,7 @@ def nhd_pkg_info(value: OptPath = None) -> PkgTupl:
         raise ValueError("Invalid value")
 
     env_info = nhd_pkg_env_info(value.joinpath(".env"))
-    
+
     return env_info[0], env_info[1], value, name
 
 
@@ -106,6 +106,6 @@ if isinstance(PKG_DIR, Path) and isinstance(PKG_NAME, str):
     ENV_FILE = PKG_DIR.joinpath(".env")
     DEBUG_FILE = DATA_DIR.joinpath("debug.json")
     LOG_FILE = DATA_DIR.joinpath("logs", f"{PKG_NAME}.log")
-    
+
     # TypeGuard
     install_import_hook(PKG_NAME)
