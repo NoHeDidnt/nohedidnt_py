@@ -1,9 +1,8 @@
-Welcome to the documentation of NoHeDidn't Python-Library!
-==========================================================
+Welcome to the documentation of the NoHeDidn't Python-Library!
+==============================================================
 
 .. automodule:: nohedidnt_py
     :members:
-
 
 
 Indices and tables
