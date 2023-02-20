@@ -148,6 +148,10 @@ plugins = [
 
 [tool.pytest.ini_options]
 addopts = "--color=yes --cov=nohedidnt_py --cov-report=xml --durations=5"
+filterwarnings = [
+    "ignore::FutureWarning",
+    "ignore::RuntimeWarning",
+]
 minversion = "5.0"
 pythonpath = ["nohedidnt_py"]
 testpaths = ["tests"]

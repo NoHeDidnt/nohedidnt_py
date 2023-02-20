@@ -1,20 +1,16 @@
 # CUSTOM (nohedidnt-py) =======================
 # Pattern(s) ----------------------------------
 *debug*
-*devel*
-
 *.patch
 *cache
-
-Devel*
+_devel*
 debug*
 
 # Folder(s) -----------------------------------
 .idea/
+data/logs/
 
 # Content(s) ----------------------------------
-data/logs/**
-notes/**
 
 # File(s) -------------------------------------
 
