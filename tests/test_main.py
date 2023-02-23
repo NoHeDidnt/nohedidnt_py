@@ -2,19 +2,15 @@
 from tests.context import *
 
 
-def test_format_msg(msg_string):
-    formatted_msg = format_msg(msg_string)
+def test_catalogue():
+    assert isinstance(nhd_catalogue_stack, NhdCatalogueStack)
+    assert isinstance(nhd_catalogue_stack.enums, catalogue.Registry)
+    assert len(nhd_catalogue_stack.enums.get_all()) == len(const.CATALOGUES.get("enums", list()))
+    assert "box_type" in nhd_catalogue_stack.enums
 
-    assert isinstance(formatted_msg, str)
-    assert msg_string in formatted_msg
-    assert PKG_ABBR in formatted_msg
 
+def test_strict_constants():
+    assert const is not None
 
-def test_nhd_debug(msg_string):
-    """
-    GIVEN msg_string
-    WHEN nhd_debug is called
-    THEN None is returned
-    """
-
-    assert nhd_debug(msg_string) is None
+    with pytest.raises(FrozenInstanceError):
+        const.PKG_ABBR = "test"
