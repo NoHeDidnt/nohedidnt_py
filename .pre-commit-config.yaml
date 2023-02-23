@@ -39,5 +39,6 @@ repos:
           pydantic,
           types-pytz,
           types-requests,
-          types-setuptools
+          types-setuptools,
+          types-tzlocal
         ]
