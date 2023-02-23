@@ -32,7 +32,7 @@ name_count = pkg_dir.parts.count(pkg_name)
 while name_count > 1:
     pkg_dir = pkg_dir.parent
     name_count = pkg_dir.parts.count(pkg_name)
-    
+
     if name_count <= 1:
         break
 

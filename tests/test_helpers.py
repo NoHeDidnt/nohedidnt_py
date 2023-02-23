@@ -5,7 +5,7 @@ from tests.context import *
 def test_find_empty_values():
     if not callable(find_empty_values):
         raise ValueError("Invalid find_empty_values")
-    
+
     search_result = find_empty_values()
     assert isinstance(search_result, list)
     assert "None" in search_result
@@ -17,13 +17,13 @@ def test_find_empty_values():
 
 def test_datetime_now():
     """Includes: format_datetime"""
-    
+
     if not callable(datetime_now):
         raise ValueError("Invalid datetime_now")
-    
+
     result = datetime_now()
     format_result = datetime_now(frmt=const.DT_FORMAT)
-    
+
     assert isinstance(result, datetime)
     assert isinstance(format_result, str)
 
@@ -73,21 +73,21 @@ def test_nhd_debug(msg_string):
 def test_detect_encoding():
     """Includes: request_data"""
     rawdata = request_data(content=True)
-    
+
     if not isinstance(rawdata, (bytes, bytearray)):
         raise ValueError("Invalid rawdata")
-    
+
     data_encoding = detect_encoding(rawdata)
-    
+
     assert isinstance(data_encoding, str)
 
 
 def test_kill_duplicates(camel_string, duplicates_list):
     if not callable(kill_duplicates):
         raise ValueError("Invalid kill_duplicates")
-    
+
     result = kill_duplicates(duplicates_list)
-    
+
     assert isinstance(result, list)
     assert len(result) == 1
     assert camel_string in result
@@ -96,9 +96,9 @@ def test_kill_duplicates(camel_string, duplicates_list):
 def test_kill_empties(camel_string, empties_list):
     if not callable(kill_empties):
         raise ValueError("Invalid kill_empties")
-    
+
     result = kill_empties(empties_list)
-    
+
     assert isinstance(result, list)
     assert len(result) == 1
     assert camel_string in result
@@ -114,9 +114,9 @@ def test_bool_from_value(bool_string):
 
 def test_continent_name_from_value():
     assert callable(continent_from_value)
-    
+
     continent = continent_from_value("Germany")
-    
+
     assert isinstance(continent, NhdContinent)
     assert continent == NhdContinent.europe
 

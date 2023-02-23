@@ -44,7 +44,7 @@ class NhdConstants:
     KEY_LEN = CALL_LEN * 2
     LOG_BACKUPS = 3
     LOOPS_MAX = 1
-    MARGIN_FACTOR = .05
+    MARGIN_FACTOR = 0.05
     SHORT_COLS = 48
     STR_LEN = 191
     # FileInfos
@@ -94,7 +94,9 @@ class NhdConstants:
     URL_STATUS = URL_FORMAT.format("https", "status", "iracing.com", "status.json")
     # Lists
     LOG_LEVELS = ["critical", "error", "exception", "warning", "info", "debug"]
-    REPL_CHRS = ["'", ]
+    REPL_CHRS = [
+        "'",
+    ]
     # Collections
     CATALOGUES = Box(
         enums=all_enums,
@@ -118,7 +120,7 @@ class NhdConstants:
             kg_lb=0,
         ),
     )
-    DETAILS = Box(),
+    DETAILS = (Box(),)
     DIRTIES = Box(
         cls_name=["Meta"],
         path_name=[".DS_Store", ".git", ".idea", ".venv", "_devel"],
@@ -130,12 +132,8 @@ class NhdConstants:
         test=["TEST"],
         timedelta=[TD_BLK],
     )
-    MARGINS = Box(
-        timedelta=timedelta(minutes=1)
-    )
-    MESSAGES = Box(
-        timer="Finished in {minutes:.2f} minutes."
-    )
+    MARGINS = Box(timedelta=timedelta(minutes=1))
+    MESSAGES = Box(timer="Finished in {minutes:.2f} minutes.")
     PATTERNS = Box(
         all_cap=(re.compile("([a-z0-9])([A-Z])"), re.sub),
         first_cap=(re.compile("(.)([A-Z][a-z]+)"), re.sub),
@@ -149,7 +147,7 @@ class NhdConstants:
         encoding_alt=[".csv", ".pdf"],
         images=[".jpg", ".jpeg", ".png", ".svg"],
         logs=[".log"],
-        serial=[".csv", ".log"]
+        serial=[".csv", ".log"],
     )
 
 
