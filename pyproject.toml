@@ -19,6 +19,21 @@ python-box = {version = "^7.0.0", extras = ["all"]}
 python-dotenv = "^0.21.1"
 pytz = "^2022.7.1"
 urllib3 = "^1.26.14"
+chardet = "^5.1.0"
+babel = "^2.11.0"
+charset-normalizer = "^3.0.1"
+typing-extensions = "^4.5.0"
+tzlocal = "^4.2"
+catalogue = "^2.0.8"
+pyyaml = "^6.0"
+suntime = "^1.2.5"
+decorator = "^5.1.1"
+watchdog = "^2.2.1"
+deepdiff6 = "^6.2.0"
+inflect = "^6.0.2"
+pycountry = "^22.3.5"
+pycountry-convert = "^0.7.2"
+colour = "^0.1.5"
 
 [tool.poetry.group.dev.dependencies]
 black = "^23.1.0"
@@ -48,6 +63,8 @@ flake8-bandit = "^4.1.1"
 flake8-black = "^0.3.6"
 flake8-isort = "^6.0.0"
 flake8-pyprojecttoml = "^0.0.2"
+types-tzlocal = "^4.2.2.3"
+types-babel = "^2.11.0.10"
 
 [tool.poetry.group.docs]
 optional = true
@@ -83,9 +100,6 @@ exclude_lines = [
     "pragma: no cover",
     "if __name__ == .__main__.:"
 ]
-
-[tool.coverage.html]
-directory = "tests"
 
 [tool.coverage.xml]
 output = "tests/coverage.xml"
@@ -145,9 +159,23 @@ plugins = [
     "pydantic.mypy"
 ]
 
+[[tool.mypy.overrides]]
+ignore_missing_imports = true
+module = [
+    "catalogue",
+    "colour",
+    "deepdiff",
+    "pycountry",
+    "pycountry_convert",
+    "pytz_deprecation_shim",
+    "pytz_deprecation_shim._impl",
+    "watchdog",
+    "watchdog.events",
+    "watchdog.observers",
+]
 
 [tool.pytest.ini_options]
-addopts = "--color=yes --cov=nohedidnt_py --cov-report=xml --durations=5"
+addopts = "--color=yes --cov=./ --cov-report=xml --durations=5"
 filterwarnings = [
     "ignore::FutureWarning",
     "ignore::RuntimeWarning",
