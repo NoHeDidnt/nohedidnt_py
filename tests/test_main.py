@@ -2,11 +2,29 @@
 from tests.context import *
 
 
-def test_catalogue():
-    assert isinstance(nhd_catalogue_stack, NhdCatalogueStack)
-    assert isinstance(nhd_catalogue_stack.enums, catalogue.Registry)
-    assert len(nhd_catalogue_stack.enums.get_all()) == len(const.CATALOGUES.get("enums", list()))
-    assert "box_type" in nhd_catalogue_stack.enums
+# Catalogues ----------------------------------
+
+
+def test_configs_catalogue():
+    assert isinstance(configs_catalogue, Registry)
+    assert len(configs_catalogue.get_all()) > 0
+    assert "default" in configs_catalogue
+
+
+def test_enums_catalogue():
+    assert isinstance(enums_catalogue, Registry)
+    assert len(enums_catalogue.get_all()) > 0
+    assert "box_type" in enums_catalogue
+    assert "continent" in enums_catalogue
+
+
+def test_helpers_catalogue():
+    assert isinstance(helpers_catalogue, Registry)
+    assert len(helpers_catalogue.get_all()) > 0
+    assert "nhd_debug" in helpers_catalogue
+
+
+# Constants -----------------------------------
 
 
 def test_strict_constants():

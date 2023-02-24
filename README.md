@@ -1,4 +1,4 @@
-# nohedidnt_py
+# nohedidnt_py - NoHeDidn't Python-Library
 
 [![PyPI](https://img.shields.io/pypi/v/nohedidnt_py)](https://pypi.org/project/nohedidnt-py/)
 [![codecov](https://codecov.io/gh/NoHeDidnt/nohedidnt_py/branch/main/graph/badge.svg?token=U0OQI580BA)](https://codecov.io/gh/NoHeDidnt/nohedidnt_py)

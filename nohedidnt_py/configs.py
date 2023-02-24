@@ -2,6 +2,7 @@
 from nohedidnt_py.aliases import *
 
 
+@configs_catalogue.register("default")
 class NhdConfig(BaseConfig):
     allow_population_by_field_name = True
     anystr_strip_whitespace = True

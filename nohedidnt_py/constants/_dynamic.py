@@ -39,12 +39,6 @@ while name_count > 1:
 if not pkg_dir.is_dir() or home_dir not in pkg_dir.parents:
     raise ValueError("Invalid pkg_dir")
 
-# Enums
-int_enums: EnumList = [NhdBoxType, NhdContinent]
-str_enums: EnumList = []
-
-all_enums: EnumList = int_enums + str_enums
-
 # Environment
 env_values = Box(os.environ.copy())
 
@@ -53,3 +47,6 @@ if pkg_dir is not None:
 
 if not isinstance(env_values, dict):
     raise ValueError("Invalid env_values")
+
+pkg_abbr = env_values.get("PKG_ABBR", pkg_abbr)
+pkg_author = env_values.get("PKG_AUTHOR", pkg_author)
