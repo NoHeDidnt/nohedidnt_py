@@ -1,4 +1,4 @@
-# CUSTOM (nohedidnt-py) =======================
+# CUSTOM (nohedidnt_py) =======================
 # Pattern(s) ----------------------------------
 *debug*
 
@@ -14,6 +14,7 @@ debug*
 stubs/
 
 # Content(s) ----------------------------------
+data/backups/**
 data/downloads/**
 data/logs/**
 
@@ -39,7 +40,6 @@ data/logs/**
 build/
 develop-eggs/
 dist/
-downloads/
 eggs/
 .eggs/
 lib/
