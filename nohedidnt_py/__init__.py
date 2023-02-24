@@ -1,2 +1,2 @@
 # -*- coding: utf-8 -*-
-from nohedidnt_py.catalogues import *
+from nohedidnt_py.helpers import *

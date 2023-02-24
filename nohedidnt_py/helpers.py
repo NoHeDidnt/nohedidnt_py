@@ -5,6 +5,7 @@ from nohedidnt_py.constants import *
 # Logging -------------------------------------
 
 
+@helpers_catalogue.register("nhd_debug")
 def nhd_debug(msg: str, caller: str = const.PKG_ABBR) -> None:
     """NHD debug function"""
 
@@ -93,30 +94,6 @@ def nhd_box(box_type: NhdBoxType = NhdBoxType.default, keys: OptList = None, val
             return_box[key] = values[keys.index(key)]
 
     return return_box
-
-
-def nhd_catalogue(value: AnyKeys):
-    value = nhd_keys(value, required=[const.PKG_ABBR])
-
-    return catalogue.create(*value)
-
-
-def nhd_catalogues_box() -> Box:
-    catalogues_box = Box()
-
-    for key, values in const.CATALOGUES.items():
-        key_catalogue = nhd_catalogue(key)
-
-        for item in values:
-            if not callable(item):
-                continue
-
-            item_nhd_name = nhd_cls_name(item, lower=True)
-            key_catalogue.register(item_nhd_name, func=item)
-
-        catalogues_box[key] = key_catalogue
-
-    return catalogues_box
 
 
 def nhd_timer(

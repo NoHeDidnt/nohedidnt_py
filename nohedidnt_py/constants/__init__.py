@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from nohedidnt_py.configs import *
-from nohedidnt_py.constants.dynamic import *
+from nohedidnt_py.constants._dynamic import *
 
 
 # Constants -----------------------------------
@@ -9,8 +9,8 @@ from nohedidnt_py.constants.dynamic import *
 @dataclass(config=NhdConfig, frozen=True)
 class NhdConstants:
     # Dynamic
-    PKG_ABBR: str = env_values.get("PKG_ABBR", pkg_abbr)
-    PKG_AUTHOR: str = env_values.get("PKG_AUTHOR", pkg_author)
+    PKG_ABBR: str = pkg_abbr
+    PKG_AUTHOR: str = pkg_author
     PKG_DIR: Path = pkg_dir
     PKG_NAME: str = pkg_name
     # Package
@@ -98,9 +98,6 @@ class NhdConstants:
         "'",
     ]
     # Collections
-    CATALOGUES = Box(
-        enums=all_enums,
-    )
     CONVERSIONS = Box(
         factor=Box(
             bar_hg=29.5299801647,
@@ -120,7 +117,7 @@ class NhdConstants:
             kg_lb=0,
         ),
     )
-    DETAILS = (Box(),)
+    DETAILS = Box(),
     DIRTIES = Box(
         cls_name=["Meta"],
         path_name=[".DS_Store", ".git", ".idea", ".venv", "_devel"],
@@ -136,9 +133,12 @@ class NhdConstants:
     MESSAGES = Box(timer="Finished in {minutes:.2f} minutes.")
     PATTERNS = Box(
         all_cap=(re.compile("([a-z0-9])([A-Z])"), re.sub),
+        email=(re.compile(r"/^.+@.+$/w"), re.match),
         first_cap=(re.compile("(.)([A-Z][a-z]+)"), re.sub),
+        hex_color=(re.compile(r"/^#?([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$/"), re.match),
         numbers=(re.compile(r"^\d+$"), re.fullmatch),
         space_cap=(re.compile("( *_+)(_)"), re.sub),
+        url=(re.compile(r"/^((https?|ftp|file):\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/"), re.match),
         vowels=(re.compile("[aeiou]", flags=re.I), re.sub),
     )
     SUFFIXXES = Box(
