@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "nohedidnt-py"
-version = "0.1.1"
+version = "0.1.0"
 description = ""
 authors = ["NoHeDidnt <dj@nohedidnt.de>"]
 readme = "README.md"
@@ -90,6 +90,7 @@ omit = [
     "*/.pytest_cache/*",
     "*/tests/*",
     "*/.venv/*",
+    "*/__init__.py",
     "*/__main__.py",
     "*/run.py"
 ]
@@ -175,10 +176,12 @@ module = [
 ]
 
 [tool.pytest.ini_options]
-addopts = "--color=yes --cov=./ --cov-report=xml --durations=5"
+addopts = "--color=yes --cov=./ --cov-report=xml --cov-report=term --durations=5 -ra    "
 filterwarnings = [
+    "ignore::DeprecationWarning",
     "ignore::FutureWarning",
     "ignore::RuntimeWarning",
+    "ignore::UserWarning",
 ]
 minversion = "5.0"
 pythonpath = ["nohedidnt_py"]
