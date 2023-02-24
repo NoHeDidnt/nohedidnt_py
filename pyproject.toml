@@ -4,7 +4,6 @@ version = "0.1.1"
 description = ""
 authors = ["NoHeDidnt <dj@nohedidnt.de>"]
 readme = "README.md"
-repository = "https://github.com/NoHeDidnt/nohedidnt_py"
 classifiers = [
     "Natural Language :: English",
     "Operating System :: OS Independent"
