@@ -8,8 +8,6 @@ repos:
       - id: poetry-check
       - id: poetry-lock
         args: [ "--no-update" ]
-#      - id: poetry-export
-#        args: [ "-o", "requirements.txt", "--with", "dev", "--with", "docs", "--without-hashes" ]
 
   - repo: https://github.com/pycqa/isort
     rev: 5.11.2
@@ -23,13 +21,6 @@ repos:
       - id: check-ast
       - id: debug-statements
       - id: fix-encoding-pragma
-#      - id: trailing-whitespace
-#        args: [--markdown-linebreak-ext=md]
-#      - id: check-symlinks
-#      - id: destroyed-symlinks
-#      - id: end-of-file-fixer
-#      - id: pretty-format-json
-#        args: [ --autofix ]
 
   - repo: https://github.com/pre-commit/mirrors-mypy
     rev: 'v1.0.1'
