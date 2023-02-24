@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "nohedidnt-py"
-version = "0.1.0"
+version = "0.1.1"
 description = ""
 authors = ["NoHeDidnt <dj@nohedidnt.de>"]
 readme = "README.md"
