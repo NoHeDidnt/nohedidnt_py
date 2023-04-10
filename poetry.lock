@@ -2198,14 +2198,14 @@ files = [
 
 [[package]]
 name = "types-tzlocal"
-version = "4.2.2.3"
+version = "4.3.0.0"
 description = "Typing stubs for tzlocal"
 category = "dev"
 optional = false
 python-versions = "*"
 files = [
-    {file = "types-tzlocal-4.2.2.3.tar.gz", hash = "sha256:fe178f213d979bae032385265e76c5893e0c28d9c2ea32c0328346795024729d"},
-    {file = "types_tzlocal-4.2.2.3-py3-none-any.whl", hash = "sha256:914cf6e6261af512a705d6d2dc68a4c0242ce8b24fc0ae38c7a474ed4185fe8e"},
+    {file = "types-tzlocal-4.3.0.0.tar.gz", hash = "sha256:0111ba51fc541831d4509d62e8492a08c92b4db91f56d7589f67eb6c09589bf4"},
+    {file = "types_tzlocal-4.3.0.0-py3-none-any.whl", hash = "sha256:fe2120b32d9eaa7715e79f3d63b9ed45e6bd913575e068791602fc267110b17b"},
 ]
 
 [package.dependencies]
