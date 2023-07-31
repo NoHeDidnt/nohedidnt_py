@@ -2092,13 +2092,13 @@ files = [
 
 [[package]]
 name = "types-pep8-naming"
-version = "0.13.0.4"
+version = "0.13.0.5"
 description = "Typing stubs for pep8-naming"
 optional = false
 python-versions = "*"
 files = [
-    {file = "types-pep8-naming-0.13.0.4.tar.gz", hash = "sha256:02c9d92b80c09f007c98e4f72f41a4023a746c7e443edb5a24eddadd876ed1ea"},
-    {file = "types_pep8_naming-0.13.0.4-py3-none-any.whl", hash = "sha256:08972a0724f8c701318e96e0e04492b945b419a26a565141f2342fa9fabd5c47"},
+    {file = "types-pep8-naming-0.13.0.5.tar.gz", hash = "sha256:f916df1eaf229e67e38911f4448f41414493409a6e63c4ff64d00449d4be2122"},
+    {file = "types_pep8_naming-0.13.0.5-py3-none-any.whl", hash = "sha256:4f4dc2c38a77bf595c18dda2da8dc4f3b1ac543785c83816263cf3afa554a4bc"},
 ]
 
 [[package]]
