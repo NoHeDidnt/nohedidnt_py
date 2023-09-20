@@ -2108,13 +2108,13 @@ types-setuptools = "*"
 
 [[package]]
 name = "types-docutils"
-version = "0.19.1.8"
+version = "0.20.0.3"
 description = "Typing stubs for docutils"
 optional = false
 python-versions = "*"
 files = [
-    {file = "types-docutils-0.19.1.8.tar.gz", hash = "sha256:975f8a78a2f422d8c6e776a09988e25565f54f7971a9384bbe8b004a1e3b0f90"},
-    {file = "types_docutils-0.19.1.8-py3-none-any.whl", hash = "sha256:008094d649bb728ff3736ff69b09cf62c04d651c577109ea4ae0f381621a7509"},
+    {file = "types-docutils-0.20.0.3.tar.gz", hash = "sha256:4928e790f42b99d5833990f99c8dd9fa9f16825f6ed30380ca981846d36870cd"},
+    {file = "types_docutils-0.20.0.3-py3-none-any.whl", hash = "sha256:a930150d8e01a9170f9bca489f46808ddebccdd8bc1e47c07968a77e49fb9321"},
 ]
 
 [[package]]
