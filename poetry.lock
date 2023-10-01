@@ -166,13 +166,13 @@ files = [
 
 [[package]]
 name = "catalogue"
-version = "2.0.9"
+version = "2.0.10"
 description = "Super lightweight function registries for your library"
 optional = false
 python-versions = ">=3.6"
 files = [
-    {file = "catalogue-2.0.9-py3-none-any.whl", hash = "sha256:5817ce97de17ace366a15eadd4987ac022b28f262006147549cdb3467265dc4d"},
-    {file = "catalogue-2.0.9.tar.gz", hash = "sha256:d204c423ec436f2545341ec8a0e026ae033b3ce5911644f95e94d6b887cf631c"},
+    {file = "catalogue-2.0.10-py3-none-any.whl", hash = "sha256:58c2de0020aa90f4a2da7dfad161bf7b3b054c86a5f09fcedc0b2b740c109a9f"},
+    {file = "catalogue-2.0.10.tar.gz", hash = "sha256:4f56daa940913d3f09d589c191c74e5a6d51762b3a9e37dd53b7437afd6cda15"},
 ]
 
 [package.dependencies]
